@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Challenge</title>
+    <script src="https://kit.fontawesome.com/bd269fc52d.js" crossorigin="anonymous"></script>
+</head>
+<body id="bodyContainer">
+    <header>
+        <section id="searchCountry" class="displayNone">
+          <input type="text" placeholder="Your Country Here" id="searchCountryInput">
+          <i class="fas fa-times-circle" id="headerSearchClose"></i>
+          <button id="searchCountryButton">Search</button>
+        </section>
+        <i class="fas fa-search" id="headerSearch"></i>
+    </header>
+    <main>
+        <section id="main-weather">
+            <div class="mainWeatherInspiration">
+                <div>
+                  <p id="mainPhrase"></p>
+                  <p id="mainPhraseAutor"></p>
+                </div>
+                <i class="fas fa-redo"></i>
+            </div>
+            <div id="mainGreetingsContainer">
+                <p id="mainGreetings"></p>
+            </div>
+            
+        </section>
+        <section>
+            <div>
+                <div id="weatherNivel"></div>
+            </div>
+            <button>More<i class="fas fa-arrow-circle-down"></i></button>
+        </section>
+    </main>
+</body>
+</html>

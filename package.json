@@ -1,0 +1,43 @@
+{
+  "name": "weatherapp-challenge",
+  "version": "1.0.0",
+  "description": "Weather App Challenge ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --entry ./src/index.js  --output-path ./dist",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adavidarevalo/weatherApp-Challenge.git"
+  },
+  "keywords": [
+    "App",
+    "weather",
+    "challenge",
+    "practice"
+  ],
+  "author": "David Arevalo <davidarevaloc20@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adavidarevalo/weatherApp-Challenge/issues"
+  },
+  "homepage": "https://github.com/adavidarevalo/weatherApp-Challenge#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
