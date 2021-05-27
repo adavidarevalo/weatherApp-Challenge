@@ -6,7 +6,7 @@ const bodyContainer = document.querySelector("#bodyContainer")
 if(hour<18){
     document.getElementById("mainGreetings").innerHTML="GOOD DAY, IT'S CURRENTLY"
     iconDay("fa-sun")
-    bodyContainer.style = "background-image: url(https://www.fondosdepantalla.top/wp-content/uploads/2016/06/wallpapers-4k-de-carreteras-Fondosdepantalla.top-2.jpg);"
+    bodyContainer.style = "background-image: url(https://www.wallpaperimageshd.com/uploads/2019/05/dark-mountain-nature.jpg);"
 } else {
     document.querySelector("#mainGreetings").innerHTML="GOOD NIGTH, IT'S CURRENTLY"
     iconDay("fa-moon")

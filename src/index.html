@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App Challenge</title>
     <script src="https://kit.fontawesome.com/bd269fc52d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 <body id="bodyContainer">
     <header>
-        <section id="searchCountry" class="displayNone">
+        <section id="searchCountry" class="searchCountry displayNone">
+            <i class="fas fa-times-circle" id="headerSearchClose"></i>
           <input type="text" placeholder="Your Country Here" id="searchCountryInput">
-          <i class="fas fa-times-circle" id="headerSearchClose"></i>
           <button id="searchCountryButton">Search</button>
         </section>
-        <i class="fas fa-search" id="headerSearch"></i>
+        <section class="headerOptions">
+            <i class="fas fa-search" id="headerSearch"></i>
+            <i class="fas fa-street-view" id="headerLocation"></i>
+        </section>
     </header>
     <main>
         <section id="main-weather">
@@ -30,11 +35,11 @@
             </div>
             
         </section>
-        <section>
+        <section class="weatherInformationContainer">
             <div>
                 <div id="weatherNivel"></div>
             </div>
-            <button>More<i class="fas fa-arrow-circle-down"></i></button>
+            <button class="moreButton">More<i class="fas fa-arrow-circle-down"></i></button>
         </section>
     </main>
 </body>
