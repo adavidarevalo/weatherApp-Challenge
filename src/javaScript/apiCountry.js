@@ -1,5 +1,6 @@
 const searchCountryButton = document.querySelector("#searchCountryButton")
 const searchCountryInput = document.querySelector("#searchCountryInput")
+apiCountry("Ecuador")
 searchCountryButton.addEventListener("click", ()=>{
     if(searchCountryInput.value==""){
         searchCountryInput.style="border:1px solid red;"
@@ -15,7 +16,8 @@ async function apiCountry(dataCountry){
     try {
         const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${dataCountry}&appid=7daaca17f73b8537056bf2d813d49c18`)
         const data = await res.json()
-        weatherTime(data)
+        weatherTime(data);
+        moreInfo(data)
       } catch (error) {
         console.log(error)
       }
@@ -50,4 +52,15 @@ function closeButton(){
     headerSearchClose.classList.add("displayNone")
     headerSearch.classList.remove("displayNone")
     headerLocation.style="display:block;"
+}
+function moreInfo(dataMore) {
+  console.log(dataMore)
+  //Wind Status
+  document.querySelector("#mainMoreWind").innerHTML=`${dataMore.wind.speed}<span>mph</span>`
+  //Humidity
+  document.querySelector("#mainMoreHumidity").innerHTML=`${dataMore.main.humidity}<span>%</span>`
+  //visibility
+  document.querySelector("#mainMoreVisibility").innerHTML=`${dataMore.visibility}<span>miles</span>`
+  //Air 
+  document.querySelector("#mainMoreAir").innerHTML=`${dataMore.main.pressure}<span>mb</span>`
 }

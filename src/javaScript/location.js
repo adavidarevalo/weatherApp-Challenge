@@ -6,11 +6,11 @@ headerLocation.addEventListener("click", ()=>{
 function localion(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(positionNow, Error);
+        messageError.innerHTML=` `
       } else {
         messageError.innerHTML=`
         <p class="locationError">Geolocation is not supported by this browser.</p>
         `
-        alert(`Geolocation is not supported by this browser.<i class="fas fa-frown"></i>`)
       }
 }
 
@@ -57,4 +57,8 @@ function Error(error) {
       `
       break;
   }
+}
+//More information
+function more(dataMore) {
+  
 }

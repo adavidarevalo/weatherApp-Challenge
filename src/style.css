@@ -182,3 +182,39 @@ main .weatherInformationContainer .locationError {
   color: red;
   text-align: center;
 }
+.mainMore {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfdff), color-stop(#e5e6e8), color-stop(#cfcfd1), color-stop(#b9b9ba), to(#a4a4a4));
+  background-image: linear-gradient(to bottom, #fbfdff, #e5e6e8, #cfcfd1, #b9b9ba, #a4a4a4);
+  margin-top: 25px;
+  padding: 15px;
+  opacity: 0.8;
+}
+.mainMore div {
+  text-align: center;
+  margin-block: 30px;
+  margin-bottom: 10px;
+}
+.mainMore div p {
+  font-family: 'Roboto', sans-serif;
+  margin-block: 10px;
+  font-size: 1.3rem;
+}
+.mainMore div .mainMoreWindInfo {
+  font-size: 1rem;
+}
+.mainMore div .mainMoreWindInfo i {
+  margin-right: 5px;
+}
+.mainMore div #mainMoreWind,
+.mainMore div #mainMoreHumidity,
+.mainMore div #mainMoreVisibility,
+.mainMore div #mainMoreAir {
+  font-size: 1.3rem;
+}
+.mainMore div #mainMoreWind span,
+.mainMore div #mainMoreHumidity span,
+.mainMore div #mainMoreVisibility span,
+.mainMore div #mainMoreAir span {
+  margin-left: 6px;
+  font-size: 1rem;
+}

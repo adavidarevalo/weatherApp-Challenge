@@ -187,6 +187,7 @@ main .weatherInformationContainer .locationError {
   background-image: linear-gradient(to bottom, #fbfdff, #e5e6e8, #cfcfd1, #b9b9ba, #a4a4a4);
   margin-top: 25px;
   padding: 15px;
+  opacity: 0.8;
 }
 .mainMore div {
   text-align: center;
