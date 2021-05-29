@@ -1,65 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.font{
-    font-family: 'Roboto', sans-serif;
+.font {
+  font-family: "Roboto", sans-serif;
 }
-@clr-white:#fff;
-body{
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 95vh;
-    height: auto;
-    .font;
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 25px;
-        .headerOptions{
-            width: 100vw;
-            display: flex;
-            margin-inline: 25px;
-            justify-content:space-between;
-        }
-        i{
-            filter: invert(1);
-            background: none;
-            font-size: 25px;
-        }       
-        .searchCountry{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:space-around;
-            align-items: center;
-            input{
-                border: none;
-                border-radius: 5px;
-                padding: 8px 15px;
-                width: 70%;
-                background: #818181;
-                color: @clr-white;
-                outline: none;
-            }
-            input:focus{
-                background: #494b52;
-            }
-            ::placeholder{
-                color: @clr-white;
-            }
-            button{
-                padding: 10px 15px;
-                margin-top: 15px;
-                border-radius: 10px;
-                border:none;
-                background: #8ea4f7;
-                color: @clr-white;
-                font-size: 1rem;
-            }
-        }
+@clr-white: #fff;
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 95vh;
+  height: auto;
+  .font;
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    .headerOptions {
+      width: 100vw;
+      display: flex;
+      margin-inline: 25px;
+      justify-content: space-between;
     }
+    i {
+      filter: invert(1);
+      background: none;
+      font-size: 25px;
+    }
+    .searchCountry {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      input {
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        width: 70%;
+        background: #818181;
+        color: @clr-white;
+        outline: none;
+      }
+      input:focus {
+        background: #494b52;
+      }
+      ::placeholder {
+        color: @clr-white;
+      }
+      button {
+        padding: 10px 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+        border: none;
+        background: #8ea4f7;
+        color: @clr-white;
+        font-size: 1rem;
+      }
+    }
+  }
 }
-.displayNone{
-    display: none !important;
+.displayNone2 {
+  display: none !important;
+}
+.displayNone {
+  display: none !important;
 }

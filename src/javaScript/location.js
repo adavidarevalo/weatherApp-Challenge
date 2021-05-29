@@ -28,7 +28,9 @@ async function positionNow(position) {
           `
           //catch
         } catch (error) {
-          console.log(error)
+          messageError.innerHTML=`
+      <p class="locationError">Cannot to connect in this moment, try after. Thanks for use our service.</p>
+      `
         }
       }
 

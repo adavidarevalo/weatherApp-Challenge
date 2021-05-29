@@ -3,7 +3,7 @@
   padding: 0;
 }
 .font {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
   background-size: cover;
@@ -11,7 +11,7 @@ body {
   width: 100%;
   min-height: 95vh;
   height: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body header {
   display: -webkit-box;
@@ -85,13 +85,36 @@ body header .searchCountry button {
   color: #fff;
   font-size: 1rem;
 }
+.displayNone2 {
+  display: none !important;
+}
 .displayNone {
   display: none !important;
 }
+.padding {
+  padding: 10px;
+}
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main #main-weather {
   padding: 10px;
 }
 main #main-weather .mainWeatherInspiration {
+  width: auto;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,11 +144,14 @@ main #main-weather #mainGreetingsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 25px 0px 0px 15px;
+  margin: 15% 0px 0px 15px;
   color: #fff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main #main-weather #mainGreetingsContainer #mainGreetings {
   margin-right: 10px;
@@ -133,7 +159,7 @@ main #main-weather #mainGreetingsContainer #mainGreetings {
 main #weatherNivel {
   color: #fff;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15%;
 }
 main #weatherNivel p {
   font-size: 6rem;
@@ -145,6 +171,7 @@ main #weatherNivel .weatherNivelCountry {
   font-size: 1.3rem;
 }
 main .weatherInformationContainer {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,9 +181,7 @@ main .weatherInformationContainer {
           flex-direction: column;
 }
 main .weatherInformationContainer .moreButton {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin: 25px 15px 0px 15px;
+  margin: 8vh 15px 0px 15px;
   width: 90px;
   background: #fff;
   border: none;
@@ -178,16 +203,18 @@ main .weatherInformationContainer .moreButton i {
   font-size: 20px;
 }
 main .weatherInformationContainer .locationError {
+  padding: 10px;
   font-size: 1.2rem;
   color: red;
   text-align: center;
 }
 .mainMore {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfdff), color-stop(#e5e6e8), color-stop(#cfcfd1), color-stop(#b9b9ba), to(#a4a4a4));
-  background-image: linear-gradient(to bottom, #fbfdff, #e5e6e8, #cfcfd1, #b9b9ba, #a4a4a4);
+  width: 90%;
+  background: #000;
   margin-top: 25px;
   padding: 15px;
-  opacity: 0.8;
+  opacity: 0.7;
+  color: #fff;
 }
 .mainMore div {
   text-align: center;
@@ -195,7 +222,7 @@ main .weatherInformationContainer .locationError {
   margin-bottom: 10px;
 }
 .mainMore div p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-block: 10px;
   font-size: 1.3rem;
 }
@@ -217,4 +244,17 @@ main .weatherInformationContainer .locationError {
 .mainMore div #mainMoreAir span {
   margin-left: 6px;
   font-size: 1rem;
+}
+@media (min-width: 773px) {
+  header section .fa-search {
+    display: none;
+  }
+  header .searchCountry {
+    background: red;
+  }
+  .displayNone2 {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }

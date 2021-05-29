@@ -19,7 +19,9 @@ async function apiCountry(dataCountry){
         weatherTime(data);
         moreInfo(data)
       } catch (error) {
-        console.log(error)
+        messageError.innerHTML=`
+      <p class="locationError">Cannot to connect in this moment, try after. Thanks for use our service.</p>
+      `
       }
 }
 
@@ -29,16 +31,15 @@ function weatherTime(printData){
     <p>${Math.floor(printData.main.temp - 273.15)}<span>°C</span></p>
     <p class="weatherNivelCountry">${printData.name}</p>
     `
-    console.log(printData)
 }
 
 //search Country
 const headerSearch = document.querySelector("#headerSearch")
 headerSearch.addEventListener("click", ()=>{
     let searchCountry = document.querySelector("#searchCountry")
-    searchCountry.classList.remove("displayNone")
-    headerSearch.classList.add("displayNone")
-    headerSearchClose.classList.remove("displayNone")
+    searchCountry.classList.remove("displayNone2")
+    headerSearch.classList.add("displayNone2")
+    headerSearchClose.classList.remove("displayNone2")
     headerLocation.style="display:none;"
 })
 //close search Country
@@ -48,13 +49,12 @@ headerSearchClose.addEventListener("click", ()=>{
 })
 function closeButton(){
     let searchCountry = document.querySelector("#searchCountry")
-    searchCountry.classList.add("displayNone")
-    headerSearchClose.classList.add("displayNone")
-    headerSearch.classList.remove("displayNone")
+    searchCountry.classList.add("displayNone2")
+    headerSearchClose.classList.add("displayNone2")
+    headerSearch.classList.remove("displayNone2")
     headerLocation.style="display:block;"
 }
 function moreInfo(dataMore) {
-  console.log(dataMore)
   //Wind Status
   document.querySelector("#mainMoreWind").innerHTML=`${dataMore.wind.speed}<span>mph</span>`
   //Humidity
