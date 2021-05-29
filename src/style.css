@@ -10,17 +10,19 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   min-height: auto;
+  min-height: 100vh;
   height: auto;
   font-family: "Roboto", sans-serif;
 }
 body header {
+  width: 90%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 25px;
-  margin-bottom: 15px;
 }
 body header .headerOptions {
   width: 100vw;
@@ -39,7 +41,6 @@ body header i {
   font-size: 25px;
 }
 body header .searchCountry {
-  height: 50px;
   margin: 0 auto;
   width: 90%;
   display: -webkit-box;
@@ -50,26 +51,24 @@ body header .searchCountry {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 body header .searchCountry .fa-times-circle {
   margin-bottom: 10px;
   margin-inline: 10px;
+  justify-items: center;
 }
 body header .searchCountry .headerSearchAndButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 body header .searchCountry .headerSearchAndButton input {
   border: none;
@@ -79,7 +78,7 @@ body header .searchCountry .headerSearchAndButton input {
   background: #818181;
   color: #fff;
   outline: none;
-  min-width: 250px;
+  min-width: 200px;
   max-width: 400px;
   margin-inline: 10px;
 }
@@ -139,7 +138,7 @@ main .main-weather {
 }
 main .main-weather .mainWeatherInspiration {
   width: auto;
-  max-width: 500px;
+  max-width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +205,8 @@ main .weatherInformationContainer {
           flex-direction: column;
 }
 main .weatherInformationContainer .moreButton {
-  margin: 8vh 15px 0px 15px;
+  margin: 0 auto;
+  margin-top: 8vh;
   width: 90px;
   background: #fff;
   border: none;
@@ -240,6 +240,7 @@ main .weatherInformationContainer .locationError {
   padding: 15px;
   opacity: 0.7;
   color: #fff;
+  margin-bottom: 30px;
 }
 .mainMore div {
   text-align: center;
@@ -269,4 +270,24 @@ main .weatherInformationContainer .locationError {
 .mainMore div #mainMoreAir span {
   margin-left: 6px;
   font-size: 1rem;
+}
+@media (min-width: 637px) {
+  .headerSearchAndButton {
+    -ms-flex-wrap: unset !important;
+        flex-wrap: unset !important;
+  }
+  .headerSearchAndButton button {
+    margin-top: 0px !important;
+  }
+}
+@media (min-width: 800px) {
+  .mainMore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-inline: 50px;
+  }
 }
