@@ -9,7 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 95vh;
+  min-height: auto;
   height: auto;
   font-family: "Roboto", sans-serif;
 }
@@ -20,6 +20,7 @@ body header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 25px;
+  margin-bottom: 15px;
 }
 body header .headerOptions {
   width: 100vw;
@@ -38,18 +39,39 @@ body header i {
   font-size: 25px;
 }
 body header .searchCountry {
+  height: 50px;
+  margin: 0 auto;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-body header .searchCountry input {
+body header .searchCountry .fa-times-circle {
+  margin-bottom: 10px;
+  margin-inline: 10px;
+}
+body header .searchCountry .headerSearchAndButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body header .searchCountry .headerSearchAndButton input {
   border: none;
   border-radius: 5px;
   padding: 8px 15px;
@@ -57,26 +79,29 @@ body header .searchCountry input {
   background: #818181;
   color: #fff;
   outline: none;
+  min-width: 250px;
+  max-width: 400px;
+  margin-inline: 10px;
 }
-body header .searchCountry input:focus {
+body header .searchCountry .headerSearchAndButton input:focus {
   background: #494b52;
 }
-body header .searchCountry ::-webkit-input-placeholder {
+body header .searchCountry .headerSearchAndButton ::-webkit-input-placeholder {
   color: #fff;
 }
-body header .searchCountry ::-moz-placeholder {
+body header .searchCountry .headerSearchAndButton ::-moz-placeholder {
   color: #fff;
 }
-body header .searchCountry :-ms-input-placeholder {
+body header .searchCountry .headerSearchAndButton :-ms-input-placeholder {
   color: #fff;
 }
-body header .searchCountry ::-ms-input-placeholder {
+body header .searchCountry .headerSearchAndButton ::-ms-input-placeholder {
   color: #fff;
 }
-body header .searchCountry ::placeholder {
+body header .searchCountry .headerSearchAndButton ::placeholder {
   color: #fff;
 }
-body header .searchCountry button {
+body header .searchCountry .headerSearchAndButton button {
   padding: 10px 15px;
   margin-top: 15px;
   border-radius: 10px;
@@ -109,10 +134,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-main #main-weather {
+main .main-weather {
   padding: 10px;
 }
-main #main-weather .mainWeatherInspiration {
+main .main-weather .mainWeatherInspiration {
   width: auto;
   max-width: 500px;
   display: -webkit-box;
@@ -122,25 +147,25 @@ main #main-weather .mainWeatherInspiration {
       justify-content: space-around;
   padding-top: 50px;
 }
-main #main-weather .mainWeatherInspiration div {
+main .main-weather .mainWeatherInspiration div {
   width: 70%;
 }
-main #main-weather .mainWeatherInspiration div p {
+main .main-weather .mainWeatherInspiration div p {
   color: #fff;
   line-height: 30px;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
-main #main-weather .mainWeatherInspiration div #mainPhraseAutor {
+main .main-weather .mainWeatherInspiration div .mainPhraseAutor {
   font-size: 1rem;
 }
-main #main-weather .mainWeatherInspiration i {
+main .main-weather .mainWeatherInspiration i {
   -webkit-filter: invert(1);
           filter: invert(1);
   background: none;
   font-size: 25px;
 }
-main #main-weather #mainGreetingsContainer {
+main .main-weather .mainGreetingsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,21 +178,21 @@ main #main-weather #mainGreetingsContainer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #main-weather #mainGreetingsContainer #mainGreetings {
+main .main-weather .mainGreetingsContainer .mainGreetings {
   margin-right: 10px;
 }
-main #weatherNivel {
+main .weatherNivel {
   color: #fff;
   text-align: center;
   margin-top: 15%;
 }
-main #weatherNivel p {
+main .weatherNivel p {
   font-size: 6rem;
 }
-main #weatherNivel p span {
+main .weatherNivel p span {
   font-size: 1.5rem;
 }
-main #weatherNivel .weatherNivelCountry {
+main .weatherNivel .weatherNivelCountry {
   font-size: 1.3rem;
 }
 main .weatherInformationContainer {
@@ -244,17 +269,4 @@ main .weatherInformationContainer .locationError {
 .mainMore div #mainMoreAir span {
   margin-left: 6px;
   font-size: 1rem;
-}
-@media (min-width: 773px) {
-  header section .fa-search {
-    display: none;
-  }
-  header .searchCountry {
-    background: red;
-  }
-  .displayNone2 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
 }

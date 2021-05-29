@@ -15,31 +15,33 @@
   <header>
     <section id="searchCountry" class="searchCountry displayNone2">
       <i class="fas fa-times-circle" id="headerSearchClose"></i>
-      <input type="text" placeholder="Your Country Here" id="searchCountryInput">
-      <button id="searchCountryButton">Search</button>
+      <div class="headerSearchAndButton">
+        <input type="text" placeholder="Your Country Here" id="searchCountryInput">
+        <button id="searchCountryButton">Search</button>
+      </div>
     </section>
     <section class="headerOptions">
-      <i class="fas fa-search" id="headerSearch"></i>
       <i class="fas fa-street-view" id="headerLocation"></i>
+      <i class="fas fa-search" id="headerSearch"></i>
     </section>
   </header>
   <main>
-    <section id="main-weather">
+    <section id="main-weather" class="main-weather">
       <div class="mainWeatherInspiration">
         <div>
           <p id="mainPhrase"></p>
-          <p id="mainPhraseAutor"></p>
+          <p id="mainPhraseAutor" class="mainPhraseAutor"></p>
         </div>
         <i class="fas fa-redo"></i>
       </div>
-      <div id="mainGreetingsContainer">
-        <p id="mainGreetings"></p>
+      <div id="mainGreetingsContainer" class="mainGreetingsContainer">
+        <p id="mainGreetings" class="mainGreetings"></p>
       </div>
 
     </section>
     <section class="weatherInformationContainer">
       <div>
-        <div id="weatherNivel"></div>
+        <div id="weatherNivel" class="weatherNivel"></div>
         <div id="messageError"></div>
       </div>
       <button class="moreButton">More<i class="fas fa-arrow-circle-down"></i> <i
