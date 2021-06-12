@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   min-height: auto;
-  min-height: 96vh;
+  min-height: 93vh;
   height: auto;
   font-family: "Roboto", sans-serif;
 }
@@ -22,7 +22,7 @@ body header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top: 3%;
 }
 body header .headerOptions {
   width: 100vw;
