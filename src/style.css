@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   min-height: auto;
-  min-height: 100vh;
+  min-height: 96vh;
   height: auto;
   font-family: "Roboto", sans-serif;
 }
