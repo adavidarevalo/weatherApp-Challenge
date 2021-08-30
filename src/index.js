@@ -4,4 +4,3 @@ import greetings from "./javaScript/greetings";
 import location from "./javaScript/location";
 import apiCountry from "./javaScript/apiCountry";
 import moreInfo from "./javaScript/moreInfo";
-

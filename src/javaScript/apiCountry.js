@@ -1,5 +1,7 @@
 const searchCountryButton = document.querySelector("#searchCountryButton")
 const searchCountryInput = document.querySelector("#searchCountryInput")
+const spinnerContainer = document.querySelector(".spinner")
+
 apiCountry("Ecuador")
 searchCountryButton.addEventListener("click", ()=>{
     if(searchCountryInput.value==""){
@@ -13,6 +15,7 @@ searchCountryButton.addEventListener("click", ()=>{
 })
 
 async function apiCountry(dataCountry){
+    spinnerContainer.classList.remove('displayNone')
     try {
         const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${dataCountry}&appid=7daaca17f73b8537056bf2d813d49c18`)
         const data = await res.json()
@@ -23,6 +26,7 @@ async function apiCountry(dataCountry){
       <p class="locationError">Cannot to connect in this moment, try after. Thanks for use our service.</p>
       `
       }
+      spinnerContainer.classList.add('displayNone')
 }
 
 function weatherTime(printData){

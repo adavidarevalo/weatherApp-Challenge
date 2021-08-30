@@ -1,5 +1,8 @@
 const messageError = document.querySelector("#messageError") 
 const headerLocation = document.querySelector("#headerLocation")
+const spinnerContainer = document.querySelector(".spinner")
+
+
 headerLocation.addEventListener("click", ()=>{
     localion()
 })
@@ -15,8 +18,7 @@ function localion(){
 }
 
 async function positionNow(position) {
-    console.log(position.coords.latitude )
-    console.log(position.coords.longitude )
+        spinnerContainer.classList.remove('displayNone')
         try {
           const res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=7daaca17f73b8537056bf2d813d49c18`)
           const data = await res.json()
@@ -32,6 +34,7 @@ async function positionNow(position) {
       <p class="locationError">Cannot to connect in this moment, try after. Thanks for use our service.</p>
       `
         }
+        spinnerContainer.classList.add('displayNone')
       }
 
 

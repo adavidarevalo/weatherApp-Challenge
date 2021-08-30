@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/bd269fc52d.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://images.squarespace-cdn.com/content/v1/5572b7b4e4b0a20071d407d4/1487090874274-FH2ZNWOTRU90UAF5TA2B/Weather+Targeting">
 </head>
 
 <body id="bodyContainer">
@@ -26,6 +27,20 @@
     </section>
   </header>
   <main>
+    <section class="spinner displayNone">
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>Loading...</p>
+    </section>
     <section id="main-weather" class="main-weather">
       <div class="mainWeatherInspiration">
         <div>
@@ -44,7 +59,7 @@
         <div id="weatherNivel" class="weatherNivel"></div>
         <div id="messageError"></div>
       </div>
-      <button class="moreButton">More<i class="fas fa-arrow-circle-down"></i> <i
+      <button class="moreButton"><span id='MoreLess'>More</span><i class="fas fa-arrow-circle-down"></i> <i
           class="fas fa-arrow-circle-up displayNone"></i></button>
     </section>
     <section class="mainMore displayNone">
